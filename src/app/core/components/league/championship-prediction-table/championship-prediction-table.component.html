@@ -1,0 +1,22 @@
+<div>
+	<h2>Şampiyonluk İhtimalleri</h2>
+	@if(predictions.length){
+		<p-table [value]="predictions" [tableStyle]="{ 'width': '100%' }" [styleClass]="'p-datatable-sm'">
+			<ng-template pTemplate="header">
+				<tr>
+					<th>Takımlar</th>
+					<th>%</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-prediction>
+				<tr>
+					<td>{{ prediction.name }}</td>
+					<td>{{ prediction.percentage }}</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	
+	}@else {
+		<app-no-data [message]="'Ligin 4.haftasından sonra şampiyonluk ihtimalleri görüntülenebilecektir.'"></app-no-data>
+	}
+</div>

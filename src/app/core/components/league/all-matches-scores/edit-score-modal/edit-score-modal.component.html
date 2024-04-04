@@ -1,0 +1,19 @@
+<div>
+	<form [formGroup]="editScoreFormGroup" (ngSubmit)="onSubmit()">
+		<div class="body">
+			<div class="form-group">
+				<label for="homeScore">{{match.home.name}}</label>
+				<input type="number" id="homeScore" pInputText formControlName="homeScore" min="0" />
+			</div>
+			<div class="form-group">
+				<label for="awayScore">{{match.away.name}}</label>
+				<input type="number" id="awayScore" pInputText formControlName="awayScore" min="0" />
+			</div>
+		</div>
+
+		<div class="footer">
+			<p-button label="Kapat" (click)="close()" [raised]="true" severity="danger"></p-button>
+			<p-button type="submit" label="Kaydet" [raised]="true"></p-button>
+		</div>
+	</form>
+</div>

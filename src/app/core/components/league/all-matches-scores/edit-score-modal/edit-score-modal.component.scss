@@ -1,0 +1,16 @@
+.body{
+	display: flex;
+	flex-direction: column;
+
+	.form-group{
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

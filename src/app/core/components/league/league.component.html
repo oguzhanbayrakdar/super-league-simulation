@@ -1,0 +1,29 @@
+<div class="wrapper">
+	<div class="left-side">
+
+		<div class="points-table">
+			<app-point-table></app-point-table>
+		</div>
+		<div class="current-matches">
+			<app-scores-table></app-scores-table>
+		</div>
+		
+		<div class="next-matches">
+		</div>
+		
+		<div class="buttons">
+			<p-button label="Sonraki Hafta" (click)="nextWeek()" icon="pi pi-arrow-right" iconPos="right"></p-button>
+			<p-button label="Tüm Ligi Oynat" (click)="endLeague()" icon="pi pi-angle-double-right" iconPos="right"></p-button>
+		</div>
+	</div>
+	<div class="right-side">
+		<div class="championship-predictions">
+			<app-championship-prediction-table></app-championship-prediction-table>
+		</div>
+		<div class="all-scores">
+			<app-all-matches-scores></app-all-matches-scores>
+		</div>
+	</div>
+</div>
+
+<p-toast key="champion-toast-key" position="top-center"></p-toast>

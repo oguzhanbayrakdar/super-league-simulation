@@ -1,0 +1,26 @@
+.wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	.right-side, .left-side{
+		width: 48vw;
+	}
+	.right-side{
+		display: grid;
+		grid-template-columns: 40% 60%;
+	}
+
+	.left-side{
+		display: flex;
+		flex-direction: column;
+	}
+	
+}
+
+.buttons{
+	margin-top: 24px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

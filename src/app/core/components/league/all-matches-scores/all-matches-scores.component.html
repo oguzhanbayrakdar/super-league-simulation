@@ -1,0 +1,27 @@
+<div class="wrapper">
+	<h2>Tüm Maç Sonuçları</h2>
+	
+	@for(scores of allScores; track scores){
+		@if(scores[0].status !== 'not-played'){
+			<p-table [value]="scores" [tableStyle]="{ 'width': '25vw' }" [styleClass]="'p-datatable-sm'">
+				<ng-template pTemplate="header">
+					<tr>
+						<th colspan="4" style="text-align: center;">STSL {{scores[0].week}}. Hafta Maç Sonuçları</th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-score>
+					<tr>
+						<td>{{ score.home.name }}</td>
+						<td>{{ score.homeGoals + ' - ' + score.awayGoals }}</td>
+						<td>{{ score.away.name }}</td>
+						<td><p-button icon="pi pi-pencil" (click)="editScore(score)" size="small" [rounded]="true" [text]="true" severity="secondary"></p-button>
+						</td>
+					</tr>
+				</ng-template>
+			</p-table>
+		}
+	}
+	@if(allScores[0][0].status === 'not-played') {
+		<app-no-data [message]="'Henüz hiçbir maç oynanmadı.'"></app-no-data>
+	}
+</div>
